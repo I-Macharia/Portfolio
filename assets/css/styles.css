@@ -2,9 +2,9 @@
 header {
     background-color: #333;
     color: #fff;
-    padding: 50px;
+    padding: 20px;
     margin: 0;
-	height: 100px; /* set the height of the header to 100 pixels */
+	height: 150px; /* set the height of the header to 100 pixels */
 }
 
 @media (max-width: 768px) {
@@ -93,8 +93,6 @@ iframe {
     padding-bottom: 10px;
 }
 
-
-
 footer {
     position: relative;
     bottom: 0;
@@ -110,7 +108,9 @@ footer {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    background-image: url('assets/Images/paradise.jpeg'); /* Replace 'path-to-your-image.jpg' with the actual path to your image */
+    background-size: cover; /* Scale the image to cover the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-attachment: fixed; /* Fix the background image in place (optional) */
+    
 }
