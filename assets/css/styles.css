@@ -1,16 +1,18 @@
+/* styles.css */
+
 /* Apply a background color to the header */
 header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     margin: 0;
-	height: 150px; /* set the height of the header to 100 pixels */
+    height: 150px;
 }
 
 @media (max-width: 768px) {
     /* CSS rules for smaller screens */
     .container {
-        width: 100%; /* Full width for smaller screens */
+        width: 100%;
     }
 }
 
@@ -49,16 +51,15 @@ a {
 }
 
 iframe {
-    flex: 1; /* Let the iframe take the available space */
+    flex: 1;
     width: 100%;
     border: none;
 }
 
-
 /* Style the navigation list */
 .navigation {
     list-style: square;
-	height: 10px; /* set the height of the header to 100 pixels */
+    height: 10px;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -72,7 +73,7 @@ iframe {
 /* Style the navigation links */
 .navigation a {
     text-decoration: none;
-    color: #FFF ;
+    color: #FFF;
     font-weight: bold;
     transition: color 0.3s;
 }
@@ -89,28 +90,26 @@ iframe {
 }
 
 .content {
-    /* padding the footer adds 40 to footer height */
     padding-bottom: 10px;
 }
 
 footer {
     position: relative;
     bottom: 0;
-    background: #333;
+    background: #435;
     height: 50px;
     font-family: 'Open Sans', sans-serif;
-    background-color: #333;
-    color: #FFF;
+    background-color: #435;
+    color: #FFFF;
     padding: 20px;
-	text-align: center;
+    text-align: center;
     padding: 5px;
-    margin-top: auto; /* Push the footer to the very bottom */
+    margin-top: auto;
 }
 
 body {
-    background-image: url('assets/Images/paradise.jpeg'); /* Replace 'path-to-your-image.jpg' with the actual path to your image */
-    background-size: cover; /* Scale the image to cover the entire background */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    background-attachment: fixed; /* Fix the background image in place (optional) */
-    
+    background-image: url('assets/Images/paradise.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
