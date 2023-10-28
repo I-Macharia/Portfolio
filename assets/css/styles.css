@@ -1,13 +1,19 @@
 /* styles.css */
 /* Reset some default styles */
 body, ul {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 20px;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
+	background-image: url('assets/Images/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	color: color: #000000;
+	overflow: ; /* Prevent body from scrolling */;
 }
 
 /* Apply a background image to the header */
@@ -152,14 +158,7 @@ footer {
     margin-top: auto;
 }
 
-body {
-    background-image: url('assets/Images/background.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	color: color: #000000;
-	overflow: ; /* Prevent body from scrolling */;
-}
+
 
 nav {
     background-color: #444;
@@ -177,7 +176,7 @@ li {
 
 a {
     text-decoration: none;
-    color: white;
+    color: #007bff;
 }
 .container {
     min-height: 100vh; /* Ensure the container is at least the height of the viewport */
@@ -186,7 +185,7 @@ a {
 }
 
 .blog {
-    flex: 1; /* Expand the iframe section to fill available space */
+    flex: 100px; /* Expand the iframe section to fill available space */
 }
 
 iframe {
