@@ -94,7 +94,18 @@ h1, h2, h3 {
     padding: 10px;
     margin: 10px;
 }
+/* Style the portfolio items */
+.market {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+    gap: 20px; /* Add some spacing between items */
+}
 
+.market-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    /* You can add more styling here for your items */
+}
 /* Style links */
 a {
     color: #007bff;
