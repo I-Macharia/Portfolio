@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BobbyBob Chronicles</title>
-    <link rel="stylesheet" href="assets/css/blogstyles.css">
+    <link rel="stylesheet" href="assets/css/blogstyles.css"> 
     <style>
         /* Add your custom CSS styles here */
         body {
@@ -18,7 +18,7 @@
             background-color: #343a40;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 30px;
         }
 
         header h2 {
@@ -71,8 +71,9 @@
 <body>
     <!-- Header Section -->
     <header>
-        <ol class="nav_header">
-            <h2>Gichoya Macharia</h2> <h3><p>Data Scientist</p></h3>
+        <ol class="nav_header" >
+            <h2>Gichoya Macharia</h2> 
+			<h3>Writer</h3>
         </ol>
 
         <!-- Your navigation list -->
@@ -119,7 +120,7 @@
                 // Send scroll position to the parent page
                 window.parent.postMessage({
                     scrollY: event.target.scrollingElement.scrollTop,
-                    iframeScroll: true // Add this flag to indicate iframe scrolling
+                    iframeScroll: false // Add this flag to indicate iframe scrolling
                 }, '*'); // '*' allows cross-origin communication
             });
         });
