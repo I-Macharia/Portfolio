@@ -18,7 +18,7 @@ body {
 
 /* Apply a background image to the header */
 header {
-    background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
+    / * background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
     background-size: cover; /* Scale the background image to cover the header */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image horizontally and vertically */
@@ -93,6 +93,11 @@ h1, h2, h3 {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 10px;
+}
+.about-item {
+    border: 0px solid #ccc;
+    padding: 0px;
+    margin: 0px;
 }
 /* Style the portfolio items */
 .market {
