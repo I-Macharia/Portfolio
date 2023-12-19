@@ -1,24 +1,16 @@
 /* styles.css */
 /* Reset some default styles */
-body, ul {
-    margin: 0px;
-    padding: 20px;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-	background-image: url('assets/Images/background.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	color: color: #000000;
-	overflow: ; /* Prevent body from scrolling */;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #F8F8F8;
 }
 
 /* Apply a background image to the header */
 header {
-    / * background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
+    
     background-size: cover; /* Scale the background image to cover the header */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image horizontally and vertically */
@@ -26,25 +18,6 @@ header {
     margin: 0;
     height: 150px;
     color: #000000; /* You can set the text color to white to improve readability */
-}
-
-nav {
-    background-color: black;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: inline;
-    margin: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
 }
 
 section {
@@ -63,6 +36,12 @@ section {
     .container {
         width: 100%;
     }
+    .navigation {
+        font-size: 14px;
+    }
+    .navigation li {
+        margin: 0 10px;
+    }
 }
 
 /* Style the main heading */
@@ -77,30 +56,35 @@ p {
     margin-top: 0;
 }
 
-h1, h2, h3{
+h1, h2, h3 {
     margin-bottom: 10px;
     margin-top: 0;
 	color: #000000;
 }
 
 .container {
-    width: 90%;
-    margin: 0 auto;
-}
+    font-family: Arial, sans-serif;
+   }
 
-/* Style the portfolio items */
-.portfolio-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-}
-.about-item {
-    border: 0px solid #ccc;
-    padding: 0px;
-    margin: 0px;
-}
-/* Style the portfolio items */
-.market {
+
+.about {
+    margin: 2rem 0;
+   }
+   
+   .about-content,
+   .about-music {
+    margin-bottom: 2rem;
+   }
+   
+   .about-content p {
+    margin-bottom: 1rem;
+   }
+   
+   .about-music iframe {
+    margin-bottom: 2rem;
+   }
+
+   .market {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
     gap: 20px; /* Add some spacing between items */
@@ -118,39 +102,35 @@ a {
 }
 
 iframe {
-    flex: 1;
+    border-radius: 0;
     width: 100%;
+    height: 100%;
     border: none;
 }
 
-/* Style the navigation list */
 .navigation {
-    list-style: square;
-    height: 10px;
-    padding: 0;
     display: flex;
     justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
-/* Style the navigation list items (links) */
 .navigation li {
     margin: 0 15px;
 }
 
-/* Style the navigation links */
 .navigation a {
     text-decoration: none;
-    color: #FFF;
+    color: #007bff;
     font-weight: bold;
     transition: color 0.3s;
 }
 
-/* Style the navigation links on hover */
 .navigation a:hover {
-    color: #007bff;
+    color: #0056b3;
 }
 
-/* Style the footer */
 .wrapper {
     min-height: 100%;
     position: relative;
@@ -175,7 +155,6 @@ footer {
 }
 
 
-
 nav {
     background-color: #444;
 }
@@ -195,17 +174,9 @@ a {
     color: #007bff;
 }
 .container {
-    min-height: 100vh; /* Ensure the container is at least the height of the viewport */
-    display: flex;
-    flex-direction: column;
-}
+    font-family: Arial, sans-serif;
+   }
 
 .blog {
-    flex: 100px; /* Expand the iframe section to fill available space */
-}
-
-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
+    flex: 1; /* Expand the iframe section to fill available space */
 }
