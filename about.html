@@ -129,6 +129,8 @@
 					<h3>African Heat Presents Best Afro Songs of 2023 </h3>
 					<p><h4>Playlist</h4><h5>Our editor’s picks for best Afro songs of the year.<br> Cover: Davido<br>75 songs, 4 hr</h5></p>
 					<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXdD040nrEzxm?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+					<!-- Share button -->
+					<!-- <button id="shareButton">Share</button> -->
 					<h3> My 2023 Top Songs</h3>
 					<p><h4>Playlist</4><h5>Spotify Wrapped presents the songs you loved this year.<br>100 songs, about 5 hr</h5></p>
 					<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1Fa1IIVtEpGUcU?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -154,5 +156,23 @@
         <br>
         <p>&copy; 2023 Gichoya Macharia</p>
     </footer>
+	<script>
+	// JavaScript to handle the share button click event
+	document.getElementById('shareButton').addEventListener('click', function() {
+	// Check if the navigator supports the Web Share API
+		if (navigator.share) {
+			navigator.share({
+			title: 'gichoya-macharia.42web.io/about.html',
+			text: 'Check out this content!',
+			url: 'https://gichoya-macharia.42web.io/about.html'
+			})
+			.then(() => console.log('Shared successfully'))
+			.catch((error) => console.error('Error sharing:', error));
+		} else {
+		// Fallback for browsers that do not support the Web Share API
+		alert('Web Share API is not supported in this browser.');
+		}
+		});
+	</script>
 </body>
 </html>
