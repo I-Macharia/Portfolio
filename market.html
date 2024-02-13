@@ -4,58 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gichoya_Macharia.io</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <style>
-        /* Add your custom CSS styles here */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
+   <!-- <link rel="stylesheet" href="assets/css/styles.css"> */ -->
+   <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
 
-        .market-item {
-            text-align: center;
-            padding: 20px;
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-        }
+    th, td {
+        padding: 15px;
+        border: 1px solid #ddd;
+        text-align: left;
+    }
 
-        .market-item {
-            margin: 20px 0;
-            padding: 10px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
+    th {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }
 
-        .market-item h2 {
-            font-size: 24px;
-        }
+    tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-        .market-item p {
-            font-size: 16px;
-        }
+    .special-offer {
+        text-decoration: line-through;
+        color: #888;
+    }
 
-        .market-item a {
-            text-decoration: none;
-            color: #007bff;
-        }
+    /* Style the navigation list */
+    .navigation {
+        text-align: center;
+        padding: 10px; /* Add padding value */
+        background-color: #f0f0f0;
+        list-style: none;
+        margin: 0;
+        display: flex; /* Center the navigation horizontally */
+        justify-content: center; /* Center the items horizontally */
+    }
 
-        footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 10px;
-        }
-    </style>
+    /* Style the navigation list items (links) */
+    .navigation li {
+        display: inline-block;
+        margin: 0;
+        color: blue;
+        background-color: purple;
+        white-space: normal; /* or you can omit this line */
+        margin-right: 10px; /* Add spacing between navigation items */
+    }
+
+    /* Style the navigation links */
+    .navigation a {
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    /* Style the navigation links on hover */
+    .navigation a:hover {
+        background-color: blue;
+        color: white;
+    }
+
+    /* Style the footer */
+    .wrapper {
+        min-height: 100%;
+        position: relative;
+    }
+
+    .content {
+        padding-bottom: 10px;
+    }
+
+    footer {
+        background-color: #f0f0f0;
+        color: black;
+        text-align: center;
+        padding: 10px;
+        clear: both;
+        margin-right: 5px;
+    }
+
+    /* Style the portfolio items */
+    .market {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .market-item {
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+</style>
+
 </head>
 <body>
+
     <!-- Section for Marketplace -->
     <section class="market-item">
         <h2>Marketplace</h2>
@@ -65,6 +115,47 @@
     <!-- Container for the main content -->
     <div class="container">
         <!-- Market Section -->
+		<h1>Offers and Products</h1>
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Discounted Price</th>
+        </tr>
+        <tr>
+            <td>100w Altop streetlight</td>
+            <td>45% off</td>
+            <td>KSh 12,000</td>
+            <td class="special-offer">KSh 22,000.00</td>
+        </tr>
+        <tr>
+            <td>Special offer for Gd lite</td>
+            <td>50% off</td>
+            <td>KSh 6,000</td>
+            <td class="special-offer">KSh 12,000.00</td>
+        </tr>
+        <tr>
+            <td>.com</td>
+            <td>50% off</td>
+            <td>wwwwww</td>
+            <td class="special-offer">.com</td>
+        </tr>
+        <tr>
+            <td>500w solar back up system</td>
+            <td>23% off</td>
+            <td>KSh 43,000</td>
+            <td class="special-offer">KSh 56,000.00</td>
+        </tr>
+        <tr>
+            <td>Special offer for Garden lights</td>
+            <td>43% off</td>
+            <td>KSh 12,500</td>
+            <td class="special-offer">KSh 22,000.00</td>
+        </tr>
+    </table>
+
+		<!--
         <section class="market">
             <div class="market-item">
                 <h2>Amazon Prime Student 6-Month Trial</h2>
@@ -88,6 +179,7 @@
             </div>
         </section>
     </div>
+	
     <!-- End of .container -->
 
     <!-- Footer Section -->

@@ -1,0 +1,32 @@
+[
+    {
+        "product": "100w Altop streetlight",
+        "description": "45% off",
+        "price": "KSh 12,000",
+        "discounted_price": "KSh 22,000.00"
+    },
+    {
+        "product": "Special offer for Gd lite",
+        "description": "50% off",
+        "price": "KSh 6,000",
+        "discounted_price": "KSh 12,000.00"
+    },
+    {
+        "product": ".com",
+        "description": "50% off",
+        "price": "wwwwww",
+        "discounted_price": ".com"
+    },
+    {
+        "product": "500w solar back up system",
+        "description": "23% off",
+        "price": "KSh 43,000",
+        "discounted_price": "KSh 56,000.00"
+    },
+    {
+        "product": "Special offer for Garden lights",
+        "description": "43% off",
+        "price": "KSh 12,500",
+        "discounted_price": "KSh 22,000.00"
+    }
+]
