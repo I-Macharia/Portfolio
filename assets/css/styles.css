@@ -1,26 +1,24 @@
 /* styles.css */
 /* Reset some default styles */
-<p style="background-image: url('../Images/background.jpeg');">
 body, ul {
     margin: 0px;
     padding: 20px;
-    <p style="background-image: url('../Images/background.jpeg');">
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url('../Images/background.jpeg');
+	background-image: url('assets/Images/background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #000000;
-    overflow: ; /* Prevent body from scrolling */;
+	color: color: #000000;
+	overflow: ; /* Prevent body from scrolling */;
 }
 
 /* Apply a background image to the header */
 header {
-    background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
+    / * background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
     background-size: cover; /* Scale the background image to cover the header */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image horizontally and vertically */
@@ -128,7 +126,7 @@ iframe {
 /* Style the navigation list */
 .navigation {
                 float: center;
-				color: #024;
+				color: blue;
 				text-align: center;
 				padding: flex;
 				text-decoration: none;
@@ -141,7 +139,7 @@ iframe {
 .navigation li {
                 display: block;
                 margin: 0;
-				color: blue;
+				color: blue
 				background-color: purple;
 				white-space: wrap;
             }
@@ -193,7 +191,7 @@ ul {
 
 li {
     display: inline;
-    margin: 0px;
+    margin: 10px;
 }
 
 a {
