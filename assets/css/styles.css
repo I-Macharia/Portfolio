@@ -1,17 +1,17 @@
 /* styles.css */
 /* Reset some default styles */
-<p style="background-image: url('../Images/background.jpeg');">
+<p style="background-image: url('../Images/background.jpg');">
 body, ul {
     margin: 0px;
     padding: 20px;
-    <p style="background-image: url('../Images/background.jpeg');">
+    /* <p style="background-image: url('../Images/background.jpg');">*/
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url('../Images/background.jpeg');
-    background-size: cover;
+    /* background-image: url('../Images/background.jpg');*/
+    background-size: cover ;
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: #000000;
@@ -20,7 +20,7 @@ body {
 
 /* Apply a background image to the header */
 header {
-    background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
+    /* background-image: url('../Images/cover.jpg');  Specify the path to your image */
     background-size: cover; /* Scale the background image to cover the header */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image horizontally and vertically */
