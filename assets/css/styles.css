@@ -1,26 +1,26 @@
 /* styles.css */
 /* Reset some default styles */
-<p style="background-image: url('../Images/background.jpeg');">
+<p style="background-image: url('../Images/background.jpg');">
 body, ul {
     margin: 0px;
     padding: 20px;
-    <p style="background-image: url('../Images/background.jpeg');">
+    /* <p style="background-image: url('../Images/background.jpg');">*/
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    background-image: url('../Images/background.jpeg');
-    background-size: cover;
+    /* background-image: url('../Images/background.jpg');*/
+    background-size: cover ;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    color: #000000;
-    overflow: ; /* Prevent body from scrolling */;
+	color: color: #000000;
+	overflow: ; /* Prevent body from scrolling */;
 }
 
 /* Apply a background image to the header */
 header {
-    background-image: url('../Images/cover.jpg'); /* Specify the path to your image */
+    /* background-image: url('../Images/cover.jpg');  Specify the path to your image */
     background-size: cover; /* Scale the background image to cover the header */
     background-repeat: no-repeat; /* Prevent the background image from repeating */
     background-position: center; /* Center the background image horizontally and vertically */
@@ -127,30 +127,39 @@ iframe {
 
 /* Style the navigation list */
 .navigation {
-    list-style: square;
-    height: 10px;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+                float: center;
+				color: blue;
+				text-align: center;
+				padding: flex;
+				text-decoration: none;
+				font-size: 17px;
+				background-color: #f0f0f0;
+            } 
 }
 
 /* Style the navigation list items (links) */
 .navigation li {
-    margin: 0 15px;
-}
+                display: block;
+                margin: 0;
+				color: blue
+				background-color: purple;
+				white-space: wrap;
+            }
 
 /* Style the navigation links */
 .navigation a {
     text-decoration: none;
-    color: #FFF;
+    /* color: #FFF;*/
     font-weight: bold;
     transition: color 0.3s;
 }
 
 /* Style the navigation links on hover */
 .navigation a:hover {
-    color: #007bff;
-}
+				background-color: blue;
+				color: white;
+				white-space: nowrap;
+            }
 
 /* Style the footer */
 .wrapper {
@@ -163,18 +172,13 @@ iframe {
 }
 
 footer {
-    position: relative;
-    bottom: 0;
-    background: #435;
-    height: 50px;
-    font-family: 'Open Sans', sans-serif;
-    background-color: #435;
-    color: #FFFF;
-    padding: 20px;
-    text-align: center;
-    padding: 10px;
-    margin-top: auto;
-}
+            background-color: #f0f0f0;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            clear: both; /* Clear floating elements */
+			margin-right: 5px;
+        }
 
 
 
