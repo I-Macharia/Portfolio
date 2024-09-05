@@ -52,8 +52,18 @@ def gallery(gallery_files):
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Upload", "Gallery"])
 
+
+# Page for displaying the gallery
+if page == "Gallery":
+    st.title("Photo Gallery")
+
+    # Get all gallery files
+    gallery_files = glob.glob(os.path.join(image_folder, "*.*"))
+    gallery(gallery_files)
+    
+    
 # Page for uploading files
-if page == "Upload":
+elif page == "Upload":
     st.title("Upload New File")
 
     with st.form(key='upload-form'):
@@ -84,14 +94,6 @@ if page == "Upload":
             else:
                 st.error("Please upload a file.")
 
-# Page for displaying the gallery
-elif page == "Gallery":
-    st.title("Photo Gallery")
-
-    # Get all gallery files
-    gallery_files = glob.glob(os.path.join(image_folder, "*.*"))
-    gallery(gallery_files)
-
 # Footer with current year
 current_year = datetime.now().year
-st.markdown(f"<br><hr><center>&copy; {current_year} Bobby Pics </center>", unsafe_allow_html=True)
+st.markdown(f"<br><hr><center>&copy; {current_year} Bobby Pics  /center>", unsafe_allow_html=True)
