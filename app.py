@@ -2,9 +2,7 @@ import streamlit as st
 from PIL import Image
 import os
 import glob
-
-# Set the title of the app
-st.title("My Photo Portfolio")
+from datetime import datetime
 
 # Path to your images folder
 image_folder = "assets/GalleryImages"
@@ -12,37 +10,6 @@ image_folder = "assets/GalleryImages"
 # Create the folder if it doesn't exist
 if not os.path.exists(image_folder):
     os.makedirs(image_folder)
-
-# List of image files from the directory
-image_files = [f for f in os.listdir(image_folder) if f.endswith(('png', 'jpg', 'jpeg', 'mp4'))]
-
-
-
-
-
-# Updated file handling for images and videos
-for i, image_file in enumerate(image_files):
-    # Create the full path for each image
-    image_path = os.path.join(image_folder, image_file)
-
-    file_extension = image_file.split(".")[-1]
-    
-    # Handle images
-    if file_extension in ["png", "jpg", "jpeg"]:
-        try:
-            image = Image.open(image_path)
-            with cols[i % 3]:
-                st.image(image, caption=image_file, use_column_width=True)
-        except Exception as e:
-            st.error(f"Error displaying image {image_file}: {e}")
-    
-    # Handle videos
-    elif file_extension == "mp4":
-        try:
-            with cols[i % 3]:
-                st.video(image_path)
-        except Exception as e:
-            st.error(f"Error displaying video {image_file}: {e}")
 
 # Function to display gallery of images and videos
 def gallery(gallery_files):
@@ -81,40 +48,50 @@ def gallery(gallery_files):
     else:
         st.markdown("No files found in the gallery.")
 
-# Get all gallery files
-gallery_files = glob.glob(os.path.join(image_folder, "*.*"))
-gallery(gallery_files)
+# Sidebar navigation
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to", ["Upload", "Gallery"])
 
-# File upload form
-with st.form(key='gallery-form'):
-    file_name = st.text_input("File Name (optional)")  # Made filename optional
-    st.markdown("### Message")
-    message = st.text_area(label='Enter your message here')
-    file = st.file_uploader("Upload File", type=["png", "jpg", "jpeg", "mp4"])
+# Page for uploading files
+if page == "Upload":
+    st.title("Upload New File")
 
-    if st.form_submit_button("Add File"):
-        if file is not None:
-            file_extension = file.name.split(".")[-1]
-            
-            # If no file_name is provided, use the original uploaded file's name
-            if not file_name:
-                file_name = os.path.splitext(file.name)[0]
-            
-            # Construct the full file path
-            file_path = os.path.join(image_folder, f"{file_name}.{file_extension}")
-            
-            # Debug: print where the file will be saved
-            st.write(f"Saving file to: {file_path}")
-            
-            # Save the uploaded file to the specified directory
-            with open(file_path, "wb") as f:
-                f.write(file.read())
+    with st.form(key='upload-form'):
+        file_name = st.text_input("File Name (optional)")  # Made filename optional
+        st.markdown("### Message")
+        message = st.text_area(label='Enter your message here')
+        file = st.file_uploader("Upload File", type=["png", "jpg", "jpeg", "mp4"])
 
-            # Update the gallery with the newly uploaded file
-            gallery_files.append(file_path)
-            st.success(f"{file_extension.upper()} file added successfully!")
-        else:
-            st.error("Please upload a file.")
+        if st.form_submit_button("Add File"):
+            if file is not None:
+                file_extension = file.name.split(".")[-1].lower()
+                
+                # If no file_name is provided, use the original uploaded file's name
+                if not file_name:
+                    file_name = os.path.splitext(file.name)[0]
+                
+                # Construct the full file path
+                file_path = os.path.join(image_folder, f"{file_name}.{file_extension}")
+                
+                # Debug: print where the file will be saved
+                st.write(f"Saving file to: {file_path}")
+                
+                # Save the uploaded file to the specified directory
+                with open(file_path, "wb") as f:
+                    f.write(file.read())
 
-# Footer
-st.markdown("<br><hr><center>&copy; 2024 My Name</center>", unsafe_allow_html=True)
+                st.success(f"{file_extension.upper()} file added successfully!")
+            else:
+                st.error("Please upload a file.")
+
+# Page for displaying the gallery
+elif page == "Gallery":
+    st.title("Photo Gallery")
+
+    # Get all gallery files
+    gallery_files = glob.glob(os.path.join(image_folder, "*.*"))
+    gallery(gallery_files)
+
+# Footer with current year
+current_year = datetime.now().year
+st.markdown(f"<br><hr><center>&copy; {current_year} Bobby Pics </center>", unsafe_allow_html=True)
