@@ -50,7 +50,7 @@ def gallery(gallery_files):
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Upload", "Gallery"])
+page = st.sidebar.radio("Go to", ["Gallery","Upload"])
 
 
 # Page for displaying the gallery
@@ -96,4 +96,4 @@ elif page == "Upload":
 
 # Footer with current year
 current_year = datetime.now().year
-st.markdown(f"<br><hr><center>&copy; {current_year} Bobby Pics  /center>", unsafe_allow_html=True)
+st.markdown(f"<br><hr><center>&copy; {current_year} Bobby Pics </center>", unsafe_allow_html=True)
