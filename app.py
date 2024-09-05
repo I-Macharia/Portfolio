@@ -3,6 +3,8 @@ from PIL import Image
 import os
 import glob
 from datetime import datetime
+import base64
+import re
 
 # Path to your images folder
 image_folder = "assets/GalleryImages"
@@ -10,6 +12,14 @@ image_folder = "assets/GalleryImages"
 # Create the folder if it doesn't exist
 if not os.path.exists(image_folder):
     os.makedirs(image_folder)
+    
+def sanitize_filename(filename):
+    """Replace spaces and special characters with underscores in the filename."""
+    # Replace spaces and special characters with underscores
+    sanitized_name = re.sub(r'[^\w\s]', '_', filename)  # Replace special characters with underscores
+    sanitized_name = sanitized_name.replace(' ', '_')  # Replace spaces with underscores
+    return sanitized_name
+
 
 # Function to display gallery of images and videos
 def gallery(gallery_files):
@@ -80,8 +90,11 @@ elif page == "Upload":
                 if not file_name:
                     file_name = os.path.splitext(file.name)[0]
                 
+                # Sanitize the filename
+                sanitized_file_name = sanitize_filename(file_name)
+                
                 # Construct the full file path
-                file_path = os.path.join(image_folder, f"{file_name}.{file_extension}")
+                file_path = os.path.join(image_folder, f"{sanitized_file_name}.{file_extension}")
                 
                 # Debug: print where the file will be saved
                 st.write(f"Saving file to: {file_path}")
@@ -93,6 +106,7 @@ elif page == "Upload":
                 st.success(f"{file_extension.upper()} file added successfully!")
             else:
                 st.error("Please upload a file.")
+
 
 # Footer with current year
 current_year = datetime.now().year
