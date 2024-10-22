@@ -3,8 +3,8 @@ from PIL import Image, ExifTags
 import os
 import glob
 from datetime import datetime
-import base64
 import re
+from PIL.ExifTags import TAGS
 
 # Path to your images folder
 image_folder = "assets/GalleryImages"
@@ -12,16 +12,15 @@ image_folder = "assets/GalleryImages"
 # Create the folder if it doesn't exist
 if not os.path.exists(image_folder):
     os.makedirs(image_folder)
-    
+
 def sanitize_filename(filename):
     """Replace spaces and special characters with underscores in the filename."""
-    # Replace spaces and special characters with underscores
     sanitized_name = re.sub(r'[^\w\s]', '_', filename)  # Replace special characters with underscores
     sanitized_name = sanitized_name.replace(' ', '_')  # Replace spaces with underscores
     return sanitized_name
 
 def extract_image_metadata(image_path):
-    """Extract metadata from an image."""
+    """Extract and clean metadata from an image."""
     metadata = {}
     try:
         with Image.open(image_path) as img:
@@ -29,6 +28,11 @@ def extract_image_metadata(image_path):
             if info:
                 for tag, value in info.items():
                     tag_name = ExifTags.TAGS.get(tag, tag)
+                    
+                    # Clean up binary data and unreadable entries
+                    if isinstance(value, bytes) or (isinstance(value, str) and len(value) > 100):
+                        continue  # Skip unreadable data
+                    
                     metadata[tag_name] = value
     except Exception as e:
         metadata["Error"] = str(e)
@@ -54,12 +58,14 @@ def gallery(gallery_files):
                         image = file.read()
                         st.image(image, caption=file_caption, use_column_width=True)
 
-                        # Extract and display metadata when image is clicked
+                        # Extract and display metadata
                         metadata = extract_image_metadata(file_path)
-                        st.write(f"**Metadata for {file_caption}:**")
-                        for key, value in metadata.items():
-                            st.write(f"{key}: {value}")
+                        if metadata:
+                            st.write(f"**Metadata for {file_caption}:**")
+                            for key, value in metadata.items():
+                                st.write(f"{key}: {value}")
 
+                        # Download button
                         st.download_button(
                             label="Download",
                             data=image,
@@ -77,9 +83,10 @@ def gallery(gallery_files):
                 except Exception as e:
                     st.error(f"Error displaying video {file_path}: {e}")
 
-            # Share button
+            # Share button with GitHub link
+            github_repo_url = f"https://github.com/your-github-username/your-repo-name/blob/main/{file_path}"
             st.markdown(f"""
-                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20file%20{file_caption}%20from%20my%20gallery!&url={st.experimental_get_query_params().get('share_url', '')}"
+                <a href="https://twitter.com/intent/tweet?text=Check%20out%20this%20file%20{file_caption}%20from%20my%20gallery!&url={github_repo_url}"
                 target="_blank" rel="noopener noreferrer">
                 <button>Share on Twitter</button>
                 </a>
@@ -91,7 +98,6 @@ def gallery(gallery_files):
 st.sidebar.title("Navigation")
 page = st.sidebar.radio("Go to", ["Gallery","Upload"])
 
-
 # Page for displaying the gallery
 if page == "Gallery":
     st.title("Photo Gallery")
@@ -99,8 +105,7 @@ if page == "Gallery":
     # Get all gallery files
     gallery_files = glob.glob(os.path.join(image_folder, "*.*"))
     gallery(gallery_files)
-    
-    
+
 # Page for uploading files
 elif page == "Upload":
     st.title("Upload New File")
@@ -135,7 +140,6 @@ elif page == "Upload":
                 st.success(f"{file_extension.upper()} file added successfully!")
             else:
                 st.error("Please upload a file.")
-
 
 # Footer with current year
 current_year = datetime.now().year
