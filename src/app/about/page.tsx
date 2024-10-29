@@ -114,7 +114,7 @@ export default function About() {
             <li><Link href="/market" className="text-blue-500 hover:underline">Marketplace</Link></li>
           </ul>
         </nav>
-        <p className="text-center text-gray-600">&copy; {new Date().getFullYear()} Gichoya Macharia</p>
+               
       </footer>
     </div>
   );
