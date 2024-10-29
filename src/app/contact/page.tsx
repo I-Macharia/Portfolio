@@ -1,4 +1,4 @@
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image"; // Add this import
 
 export default function Contact() {
@@ -107,7 +107,7 @@ export default function Contact() {
         </section>
       </main>
 
-      <footer className="mt-8 text-center">
+      {/* <footer className="mt-8 text-center">
         <nav>
           <ul className="flex justify-center space-x-6 mb-4">
             <li><Link href="/about" className="text-blue-500 hover:underline">About</Link></li>
@@ -119,7 +119,7 @@ export default function Contact() {
           </ul>
         </nav>
         <p className="text-gray-600">&copy; {new Date().getFullYear()} Gichoya Macharia</p>
-      </footer>
+      </footer> */}
     </div>
   );
 }

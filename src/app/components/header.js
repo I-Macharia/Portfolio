@@ -1,4 +1,6 @@
 // components/Header.js
+import Image from "next/image"; 
+
 export default function Header() {
   return (
     <header className="bg-[#024] text-white text-center py-5">
