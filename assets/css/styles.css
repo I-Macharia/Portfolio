@@ -1,217 +1,183 @@
 /* styles.css */
 /* Reset some default styles */
-<p style="background-image: url('../Images/background.jpg');">
-body, ul {
-    margin: 0px;
-    padding: 20px;
-    /* <p style="background-image: url('../Images/background.jpg');">*/
-}
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    /* background-image: url('../Images/background.jpg');*/
-    background-size: cover ;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-	color: color: #000000;
-	overflow: ; /* Prevent body from scrolling */;
-}
-
-/* Apply a background image to the header */
-header {
-    /* background-image: url('../Images/cover.jpg');  Specify the path to your image */
-    background-size: cover; /* Scale the background image to cover the header */
-    background-repeat: no-repeat; /* Prevent the background image from repeating */
-    background-position: center; /* Center the background image horizontally and vertically */
-    padding: 20px;
-    margin: 0;
-    height: 150px;
-    color: #000000; /* You can set the text color to white to improve readability */
-}
-
-nav {
-    background-color: black;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: inline;
-    margin: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-section {
-    background-color: white;
-    padding: 20px;
-    margin: 20px;
-}
-
-.project {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-}
-@media (max-width: 768px) {
-    /* CSS rules for smaller screens */
-    .container {
-        width: 100%;
-    }
-}
-
-/* Style the main heading */
-h1 {
-    font-size: 2rem;
-    margin: 0;
-	color: #000000;
-}
-
-p {
-    margin-bottom: 20px;
-    margin-top: 0;
-}
-
-h1, h2, h3{
-    margin-bottom: 10px;
-    margin-top: 0;
-	color: #000000;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
-}
-
-/* Style the portfolio items */
-.portfolio-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    margin: 10px;
-}
-.about-item {
-    border: 0px solid #ccc;
-    padding: 0px;
-    margin: 0px;
-}
-/* Style the portfolio items */
-.market {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
-    gap: 20px; /* Add some spacing between items */
-}
-
-.market-item {
-    border: 1px solid #ccc;
-    padding: 10px;
-    /* You can add more styling here for your items */
-}
-/* Style links */
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-iframe {
-    flex: 1;
-    width: 100%;
-    border: none;
-}
-
-/* Style the navigation list */
-.navigation {
-                float: center;
-				color: blue;
-				text-align: center;
-				padding: flex;
-				text-decoration: none;
-				font-size: 17px;
-				background-color: #f0f0f0;
-            } 
-}
-
-/* Style the navigation list items (links) */
-.navigation li {
-                display: block;
-                margin: 0;
-				color: blue
-				background-color: purple;
-				white-space: wrap;
-            }
-
-/* Style the navigation links */
-.navigation a {
-    text-decoration: none;
-    /* color: #FFF;*/
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-/* Style the navigation links on hover */
-.navigation a:hover {
-				background-color: blue;
-				color: white;
-				white-space: nowrap;
-            }
-
-/* Style the footer */
-.wrapper {
-    min-height: 100%;
-    position: relative;
-}
-
-.content {
-    padding-bottom: 10px;
-}
-
-footer {
-            background-color: #f0f0f0;
-            color: black;
-            text-align: center;
-            padding: 10px;
-            clear: both; /* Clear floating elements */
-			margin-right: 5px;
-        }
-
-
-
-nav {
-    background-color: #444;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    display: inline;
-    margin: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: #007bff;
-}
-.container {
-    min-height: 100vh; /* Ensure the container is at least the height of the viewport */
+#main {
+    width: flex;
+    height: flex;
+    border: 1px solid black;
     display: flex;
-    flex-direction: column;
+  }
+  
+  /* Style the navigation list items (links) */
+  .navigation li {
+                  display: block;
+                  margin: 0;
+                  color: blue;
+                  background-color: #024;
+                  white-space: wrap;
+              }
+  
+  /* Style the navigation links */
+  .navigation a {
+      text-decoration: none;
+      color: #52024f;
+      font-weight: bold;
+      transition: color 0.5s;
+  }
+  
+  /* Style the navigation links on hover */
+  .navigation a:hover {
+                  background-color: blue;
+                  color: #52024f;
+                  white-space: wrap;
+              }
+  
+  /* Style the footer */
+  
+  footer {
+              background-color: #024;
+              color: white;
+              text-align: center;
+              padding: 10px;
+              clear: both; /* Clear floating elements */
+              margin-right: 5px;
+          }
+   
+     
+          /* Add your custom CSS styles here */
+          body {
+              font-family: Arial, sans-serif;
+              background-color: #f0f0f0;
+              margin: 10;
+              padding: 20;
+          }
+  
+          header {
+              background-color: #024;
+              color: white;
+              text-align: center;
+              padding: 5px;
+          }
+  
+          header h2 {
+              margin: 0;
+          }
+  
+          header h3 {
+              margin: 0;
+          }
+  
+          .navigation {
+              list-style: none;
+              padding: 0;
+          }
+  
+          .navigation li {
+              display: inline;
+              margin-right: 10px;
+          }
+  
+          .navigation a {
+              text-decoration: none;
+              color: white;
+          }
+  
+          .container {
+              min-height: 100vh; /* Ensure the container is at least the height of the viewport */
+              display: flex;
+              flex-direction: column;
+              background-color: white;
+              padding: 20px;
+              margin: 20px;
+          }
+  
+          .blog {
+              flex: 100px; /* Expand the iframe section to fill available space */
+              background-color: white;
+              padding: 0px;
+              margin: 0px;
+          }
+  
+          iframe {
+              width: 100%;
+              height: 100%;
+              border: 0;
+          }
+/* Social Media Icons Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
 }
 
-.blog {
-    flex: 100px; /* Expand the iframe section to fill available space */
+.social-icons li {
+    margin: 0;
 }
 
-iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
+.social-icons a {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+
+.social-icons img {
+    width: 50px !important;  /* Increase this value to make icons bigger */
+    height: 50px !important; /* Increase this value to make icons bigger */
+    object-fit: contain;
+}
+
+/* Contact section styling */
+.contact-item {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-media {
+    margin-top: 40px;
+}
+
+.social-media h2 {
+    margin-bottom: 20px;
+}
+
+
+.about-item {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-content {
+    line-height: 1.6;
+}
+
+.about-content p {
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+.resume-link {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.resume-link a {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.resume-link a:hover {
+    border-bottom-color: #007bff;
 }
