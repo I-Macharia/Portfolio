@@ -1,5 +1,5 @@
-// import Image from "next/image";
-// import Link from "next/link";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -13,6 +13,13 @@ export default function Home() {
               <h2 className="text-2xl font-semibold">
                 My personality type is: <strong>Logician</strong>
               </h2>
+              <Image 
+                  src="/assets/Images/cover.jpg"
+                  alt="A description of the image"
+                  width={500}
+                  height={300}
+                  className="my-4"
+              />
               <p className="mt-4">
                 Logicians gifts include rationality, innovation, and the ability to envision a better future – but they don&apos;t just want to hear what makes them great. 
                 Logicians want to find real, meaningful answers to seemingly impossible problems that haunt their imagination.
@@ -34,14 +41,9 @@ export default function Home() {
               </p>
               <p className="mt-4 font-semibold">
                 Here is a link to my {' '}
-                <a 
-                  href="https://www.16personalities.com/profiles/d610c8821603d" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-500 hover:underline"
-                >
+                <Link href="https://www.16personalities.com/profiles/d610c8821603d" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">
                   Personality Profile
-                </a>
+                </Link>
               </p>
               <div className="my-8">
                 <h3 className="text-xl font-semibold">
