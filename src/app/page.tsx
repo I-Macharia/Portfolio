@@ -13,13 +13,7 @@ export default function Home() {
               <h2 className="text-2xl font-semibold">
                 My personality type is: <strong>Logician</strong>
               </h2>
-              <Image 
-                  src="/assets/Images/cover.jpg"
-                  alt="A description of the image"
-                  width={500}
-                  height={300}
-                  className="my-4"
-              />
+              
               <p className="mt-4">
                 Logicians gifts include rationality, innovation, and the ability to envision a better future – but they don&apos;t just want to hear what makes them great. 
                 Logicians want to find real, meaningful answers to seemingly impossible problems that haunt their imagination.
@@ -148,10 +142,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      <footer className="py-8 text-center">
-        <p>&copy; {new Date().getFullYear()} Gichoya Macharia. All rights reserved.</p>
-      </footer>
     </div>
   );
 }

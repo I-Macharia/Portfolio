@@ -5,6 +5,13 @@ export default function Header() {
       <div className="header-content">
         <h1 className="text-3xl font-bold">Gichoya Macharia</h1>
         <h2 className="text-xl">Data Scientist</h2>
+        <Image 
+                  src="/assets/Images/cover.jpg"
+                  alt="A description of the image"
+                  width={50}
+                  height={30}
+                  className="my-4"
+              />
       </div>
     </header>
   );
