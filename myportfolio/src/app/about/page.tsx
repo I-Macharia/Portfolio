@@ -5,7 +5,7 @@ export default function About() {
     <div className="wrapper max-w-4xl mx-auto px-4 py-8">
       <main>
         <section className="about-item mb-8">
-          <h2 className="text-3xl font-semibold mb-4">Background</h2>
+          <h2 className="text-3xl font-bold mb-4">Background</h2>
           <div className="about-content text-gray-700 space-y-4">
             <p>
               I&apos;m a Web3 builder and ML engineer based in Nairobi, Kenya. I serve as CTO and co-founder
@@ -38,7 +38,7 @@ export default function About() {
             </p>
           </div>
 
-          <h2 className="text-3xl font-semibold mt-8 mb-4">Skills</h2>
+          <h2 className="text-3xl font-bold mt-8 mb-4">Skills</h2>
           <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
             <li>Web3 & Blockchain — Solidity, Avalanche (C-Chain), ethers.js, Civic Auth, IPFS</li>
             <li>Backend — FastAPI, Python, SQLAlchemy, PostgreSQL, JWT, Pydantic</li>
@@ -48,7 +48,7 @@ export default function About() {
             <li>Creative — Photography, photojournalism, visual storytelling</li>
           </ul>
 
-          <h2 className="text-3xl font-semibold mt-8 mb-4">Experience</h2>
+          <h2 className="text-3xl font-bold mt-8 mb-4">Experience</h2>
 
           <div className="experience-item mb-4">
             <h3 className="text-xl font-bold">AvaCertify — CTO & Co-founder</h3>
@@ -78,7 +78,7 @@ export default function About() {
             </ul>
           </div>
 
-          <h2 className="text-3xl font-semibold mt-8 mb-4">Education</h2>
+          <h2 className="text-3xl font-bold mt-8 mb-4">Education</h2>
 
           <div className="education-item mb-4">
             <h3 className="text-xl font-bold">Moringa School, Nairobi</h3>
