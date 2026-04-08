@@ -1,4 +1,3 @@
-// import Link from "next/link";
 export default function Market() {
   const services = [
     {
@@ -53,18 +52,30 @@ export default function Market() {
             className="border border-gray-200 rounded-xl p-6 shadow-sm bg-white flex flex-col justify-between hover:shadow-md transition-shadow"
           >
             <div>
-              <h3 className="text-lg font-bold text-gray-900 mb-1">{service.title}</h3>
-              <p className="text-sm text-[#024] font-semibold mb-1">{service.price}</p>
-              <p className="text-xs text-gray-400 mb-3">Turnaround: {service.turnaround}</p>
-              <p className="text-sm text-gray-700 leading-relaxed mb-3">{service.description}</p>
-              <p className="text-xs text-gray-500 italic">Best for: {service.ideal}</p>
+              <h3 className="text-lg font-bold text-gray-900 mb-1">
+                {service.title}
+              </h3>
+              <p className="text-sm text-[#024] font-semibold mb-1">
+                {service.price}
+              </p>
+              <p className="text-xs text-gray-400 mb-3">
+                Turnaround: {service.turnaround}
+              </p>
+              <p className="text-sm text-gray-700 leading-relaxed mb-3">
+                {service.description}
+              </p>
+              <p className="text-xs text-gray-500 italic">
+                Best for: {service.ideal}
+              </p>
             </div>
-            
+
+            {/* ✅ FIXED: added missing <a> */}
+            <a
               href={service.cta}
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block bg-[#024] text-white text-sm text-center font-semibold px-4 py-2 rounded-lg hover:bg-[#036] transition-colors"
-              >
+            >
               Get in Touch
             </a>
           </div>
