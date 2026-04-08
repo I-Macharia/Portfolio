@@ -1,4 +1,5 @@
 // import Image from "next/image";
+
 import Link from "next/link";
 
 export default function Home() {
@@ -6,9 +7,49 @@ export default function Home() {
     <div className="max-w-5xl mx-auto px-4">
       
       <main>
-        <section className="text-center mb-12">
-          <h2 className="text-3xl font-semibold">Welcome to My Portfolio</h2>
-          <div className="container mx-auto px-4">
+        {/* Hero */}
+        <section className="w-full text-center py-12 mb-4">
+          <p className="text-sm font-mono uppercase tracking-widest text-gray-400 mb-3">
+            Nairobi, Kenya · Web3 · ML · Fullstack
+          </p>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#024] mb-4 leading-tight">
+            Gichoya Macharia
+          </h1>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+            CTO of AvaCertify — building NFT-based certification on Avalanche.
+            ML engineer. Photojournalist. I ship real things across Web3, data, and
+            operational systems.
+          </p>
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link
+              href="/projects"
+              className="bg-[#024] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#036] transition-colors text-sm"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="/market"
+              className="border border-[#024] text-[#024] font-semibold px-6 py-3 rounded-lg hover:bg-[#024] hover:text-white transition-colors text-sm"
+            >
+              Work With Me
+            </Link>
+            
+              href="https://machariagichoya.substack.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-gray-300 text-gray-600 font-semibold px-6 py-3 rounded-lg hover:border-gray-500 transition-colors text-sm"
+            >
+              Subscribe on Substack
+            </a>
+          </section>
+        </section>
+
+        {/* Divider */}
+        <div className="w-full border-t border-gray-200 mb-10" />
+
+          <section className="text-center mb-12">        
+                  
+            
             <section className="my-8">
               <h2 className="text-2xl font-semibold">
                 My personality type is: <strong>Logician</strong>

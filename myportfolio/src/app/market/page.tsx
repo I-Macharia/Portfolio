@@ -64,7 +64,7 @@ export default function Market() {
               target="_blank"
               rel="noopener noreferrer"
               className="mt-4 inline-block bg-[#024] text-white text-sm text-center font-semibold px-4 py-2 rounded-lg hover:bg-[#036] transition-colors"
-            >
+              >
               Get in Touch
             </a>
           </div>
