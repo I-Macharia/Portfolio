@@ -6,7 +6,7 @@ export default function About() {
       <main>
         <section className="about-item mb-8">
           <h2 className="text-3xl font-semibold mb-4">Background</h2>
-          <div className="about-content text-black-700 space-y-4">
+          <div className="about-content text-gray-700 space-y-4">
             <p>
               I&apos;m a Web3 builder and ML engineer based in Nairobi, Kenya. I serve as CTO and co-founder
               of AvaCertify — an NFT-based certificate issuance and verification platform on the Avalanche
@@ -39,7 +39,7 @@ export default function About() {
           </div>
 
           <h2 className="text-3xl font-semibold mt-8 mb-4">Skills</h2>
-          <ul className="list-disc list-inside mb-4 text-black-700 space-y-1">
+          <ul className="list-disc list-inside mb-4 text-gray-700 space-y-1">
             <li>Web3 & Blockchain — Solidity, Avalanche (C-Chain), ethers.js, Civic Auth, IPFS</li>
             <li>Backend — FastAPI, Python, SQLAlchemy, PostgreSQL, JWT, Pydantic</li>
             <li>Frontend — Next.js, React, TypeScript, TailwindCSS, TanStack Query</li>
@@ -52,8 +52,8 @@ export default function About() {
 
           <div className="experience-item mb-4">
             <h3 className="text-xl font-bold">AvaCertify — CTO & Co-founder</h3>
-            <p className="text-black-500 text-sm"><em>2024 – Present</em></p>
-            <ul className="list-disc list-inside text-black-700 mt-2 space-y-1">
+            <p className="text-gray-500 text-sm"><em>2024 – Present</em></p>
+            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li>Architected and shipped NFT-based certificate issuance on Avalanche C-Chain.</li>
               <li>Led technical pitch to win 1st place at the Avalanche Codebase Pitch Competition.</li>
               <li>Driving MVP development toward active users and early revenue.</li>
@@ -62,8 +62,8 @@ export default function About() {
 
           <div className="experience-item mb-4">
             <h3 className="text-xl font-bold">Prodapt — Operations Engineer</h3>
-            <p className="text-black-500 text-sm"><em>2024 – Present</em></p>
-            <ul className="list-disc list-inside text-black-700 mt-2 space-y-1">
+            <p className="text-gray-500 text-sm"><em>2024 – Present</em></p>
+            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li>Support operational workflows and systems across engineering functions.</li>
               <li>Work with data pipelines, reporting, and process automation tools.</li>
             </ul>
@@ -71,8 +71,8 @@ export default function About() {
 
           <div className="experience-item mb-4">
             <h3 className="text-xl font-bold">YellowDot — Data Entry Controller & CRM Admin</h3>
-            <p className="text-black-500 text-sm"><em>August 2023 – March 2024</em></p>
-            <ul className="list-disc list-inside text-black-700 mt-2 space-y-1">
+            <p className="text-gray-500 text-sm"><em>August 2023 – March 2024</em></p>
+            <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
               <li>Migrated and cleaned 1,200+ product records across platforms within tight deadlines.</li>
               <li>Transformed PDF catalogue data into structured formats for website upload.</li>
             </ul>
@@ -82,12 +82,12 @@ export default function About() {
 
           <div className="education-item mb-4">
             <h3 className="text-xl font-bold">Moringa School, Nairobi</h3>
-            <p className="text-black-500 text-sm"><em>Data Science & Machine Learning — July 2023</em></p>
+            <p className="text-gray-500 text-sm"><em>Data Science & Machine Learning — July 2023</em></p>
           </div>
 
           <div className="education-item mb-4">
             <h3 className="text-xl font-bold">Egerton University, Nakuru</h3>
-            <p className="text-black-500 text-sm"><em>Procurement & Supplies Management — December 2017</em></p>
+            <p className="text-gray-500 text-sm"><em>Procurement & Supplies Management — December 2017</em></p>
           </div>
         </section>
       </main>
