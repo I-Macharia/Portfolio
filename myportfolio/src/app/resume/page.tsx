@@ -8,13 +8,7 @@ export default function Resume() {
       <main className="flex-grow container mx-auto my-8">
         <div className="bg-white rounded-lg shadow-md p-6">
           <section className="blog-iframe">
-            <iframe 
-              src="https://1drv.ms/b/c/db3a14197928c44e/IQSbkb2xTnH_SJFJxp8Kd4OEAb5tf2_Wv2MBEReailTuMN4" 
-              width="flex"
-              height="600" 
-              frameBorder="0" 
-              className="rounded"
-            />
+            <iframe src="https://1drv.ms/b/c/db3a14197928c44e/IQSbkb2xTnH_SJFJxp8Kd4OEAb5tf2_Wv2MBEReailTuMN4" width="98" height="120" frameborder="0" scrolling="no"></iframe>
           </section>
         </div>
       </main>
