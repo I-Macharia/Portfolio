@@ -94,7 +94,7 @@ export default function Contact() {
               <li>
                 <a href="https://www.tumblr.com/blog/bobbybobsthoughts/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/assets/Images/tumblr-logo.png"
+                    src="/assets/Images/tumblr-logo.png"
                     alt="Tumblr"
                     width={50}
                     height={50}
