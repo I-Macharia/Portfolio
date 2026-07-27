@@ -9,8 +9,8 @@ export default function Resume() {
         <div className="bg-white rounded-lg shadow-md p-6">
           <section className="blog-iframe">
             <iframe 
-              src="https://onedrive.live.com/embed?resid=DB3A14197928C44E%211205&authkey=!AEU7Mi9jR-VkFrU&em=2" 
-              width="100%" 
+              src="https://1drv.ms/b/c/db3a14197928c44e/IQSbkb2xTnH_SJFJxp8Kd4OEAb5tf2_Wv2MBEReailTuMN4" 
+              width=flex 
               height="600" 
               frameBorder="0" 
               className="rounded"
