@@ -17,7 +17,7 @@ export default function Contact() {
               <li>
                 <a href="https://web.facebook.com/Macharia.Gichoya/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/facebook-logo.png" // Remove /public from path
+                    src="/assets/Images/facebook-logo.png"
                     alt="Facebook"
                     width={50}
                     height={50}
@@ -28,7 +28,7 @@ export default function Contact() {
               <li>
                 <a href="https://twitter.com/GichoyaIan" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/X-logo.png" // Remove /public from path
+                    src="/assets/Images/X-logo.png"
                     alt="X"
                     width={50}
                     height={50}
@@ -39,7 +39,7 @@ export default function Contact() {
               <li>
                 <a href="https://www.linkedin.com/in/gichoya-macharia/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/linkedin-logo.png" // Remove /public from path
+                    src="/assets/Images/linkedin-logo.png"
                     alt="LinkedIn"
                     width={50}
                     height={50}
@@ -50,7 +50,7 @@ export default function Contact() {
               <li>
                 <a href="https://www.instagram.com/bobby_shoya/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/instagram-logo.png" // Remove /public from path
+                    src="/assets/Images/instagram-logo.png"
                     alt="Instagram"
                     width={50}
                     height={50}
@@ -61,7 +61,7 @@ export default function Contact() {
               <li>
                 <a href="https://t.me/B0bbyB0b" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/telegram-logo.png" // Remove /public from path
+                    src="/assets/Images/telegram-logo.png"
                     alt="Telegram"
                     width={50}
                     height={50}
@@ -72,7 +72,7 @@ export default function Contact() {
               <li>
                 <a href="https://www.pinterest.com/machariagichoya/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/pinterest-logo.png" // Remove /public from path
+                    src="/assets/Images/pinterest-logo.png"
                     alt="Pinterest"
                     width={50}
                     height={50}
@@ -83,7 +83,7 @@ export default function Contact() {
               <li>
                 <a href="https://wa.me/+254718338439" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/busniesswhatsapp-logo.png" // Remove /public from path
+                    src="/assets/Images/busniesswhatsapp-logo.png"
                     alt="WhatsApp"
                     width={50} 
                     height={50}
@@ -94,7 +94,7 @@ export default function Contact() {
               <li>
                 <a href="https://www.tumblr.com/blog/bobbybobsthoughts/" target="_blank" rel="noopener noreferrer">
                   <Image
-                    src="/assets/Images/tumblr-logo.png" // Remove /public from path
+                    src="/assets/assets/Images/tumblr-logo.png"
                     alt="Tumblr"
                     width={50}
                     height={50}

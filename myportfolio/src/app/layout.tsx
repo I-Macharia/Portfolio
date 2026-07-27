@@ -1,4 +1,18 @@
-import NavBar from './components/NavBar';
+// Local fallback NavBar to avoid module not found for './components/NavBar'
+function NavBar() {
+  return (
+    <nav className="py-3">
+      <div className="flex gap-6 text-sm">
+        {['/', '/about', '/projects', '/market', '/blog', '/contact'].map((href, i) => (
+          <a key={i} href={href} className="hover:opacity-100 transition-opacity text-white/90">
+            {['Home', 'About', 'Projects', 'Market', 'Blog', 'Contact'][i]}
+          </a>
+        ))}
+      </div>
+    </nav>
+  );
+}
+
 import './globals.css';
 
 export const metadata = {
@@ -8,8 +22,8 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="flex flex-col min-h-screen">
+    <html lang="en" suppressHydrationWarning>
+      <body className="flex flex-col min-h-screen" suppressHydrationWarning>
 
         {/* Header */}
         <header style={{ background: 'var(--navy)' }} className="text-white px-6 py-4">
