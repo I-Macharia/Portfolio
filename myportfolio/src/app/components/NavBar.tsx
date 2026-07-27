@@ -25,10 +25,10 @@ export default function NavBar() {
           <li key={href}>
             <Link
               href={href}
-              className={`font-bold transition-colors duration-200 px-3 py-2 rounded text-sm
+              className={`text-sm font-medium transition-all duration-200 px-3 py-2 rounded-md
                 ${pathname === href
-                  ? "bg-[#024] text-white"
-                  : "text-[#52024f] hover:bg-[#024] hover:text-white"
+                  ? "bg-white/20 text-white"
+                  : "text-white/60 hover:text-white hover:bg-white/10"
                 }`}
             >
               {label}
