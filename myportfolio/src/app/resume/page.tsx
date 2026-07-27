@@ -10,7 +10,7 @@ export default function Resume() {
           <section className="blog-iframe">
             <iframe 
               src="https://1drv.ms/b/c/db3a14197928c44e/IQSbkb2xTnH_SJFJxp8Kd4OEAb5tf2_Wv2MBEReailTuMN4" 
-              width=flex
+              width="flex"
               height="600" 
               frameBorder="0" 
               className="rounded"
